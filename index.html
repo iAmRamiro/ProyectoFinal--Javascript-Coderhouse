@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>E-COMMERCE</title>
+
+</head>
+<body>
+    
+
+    <div class="wrapper">
+
+        <aside>
+
+            <header class="header">
+                <h1 class="header__titulo">Ramiro <span>Tech</span></h1>
+            </header>
+
+            <nav class="nav">
+              <ul class="list">
+                <li class="list__item">
+                    <div class="list__button">
+                        <img src="img/icons/menu.png" alt="" class="list__img">
+                        <button id="todos" class="nav__link active" >Todos los productos</button>
+                    </div>
+                </li>
+
+                <li class="list__item list__item--click">
+                    <div class="list__button list__button--click">
+                        <img src="img/icons/procesador.png" alt="" class="list__img">
+                        <button class="nav__link">Procesador</button>
+                        <img src="img/icons/next.png" alt="" class="list__arrow">
+                    </div>
+
+                    <ul class="list__show">
+                        <li class="list__inside">
+                            <button id="procesador-amd" class="nav__link nav__link--inside "> Amd </button>
+                        </li>
+                        <li class="list__inside">
+                            <button id="procesador-intel" class="nav__link nav__link--inside "> Intel </button>
+                        </li>
+                    </ul>
+
+                </li>
+
+
+                <li class="list__item  list__item--click">
+                    <div class="list__button list__button--click">
+                        <img src="img/icons/motherboard.png" alt="" class="list__img">
+                        <button class="nav__link" >Motherboard</button>
+                        <img src="img/icons/next.png" alt="" class="list__arrow">
+                    </div>
+
+                    <ul class="list__show">
+                        <li class="list__inside">
+                            <button id="motherboard-amd" class="nav__link nav__link--inside "> Amd </button>
+                        </li>
+                        <li class="list__inside">
+                            <button id="motherboard-intel" class="nav__link nav__link--inside "> Intel </button>
+                        </li>
+                    </ul>
+
+                </li>
+
+                <li class="list__item  list__item--click">
+                    <div class="list__button list__button--click">
+                        <img src="img/icons/tarjeta grafica.png" alt="" class="list__img">
+                        <button class="nav__link">Video</button>
+                        <img src="img/icons/next.png" alt="" class="list__arrow">
+                    </div>
+
+                    <ul class="list__show">
+                        <li class="list__inside">
+                            <button id="Placa_de_Video-gtx" class="nav__link nav__link--inside "> Geforce GTX </button>
+                        </li>
+                        <li class="list__inside">
+                            <button id="Placa_de_Video-amd" class="nav__link nav__link--inside "> Radeon AMD </button>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="list__item">
+                    <div class="list__button">
+                        <img src="img/icons/gabinete.png" alt="" class="list__img">
+                        <button id="gabinetes" class="nav__link" >Gabinetes</button>
+                    </div>
+                </li>
+
+                <li class="list__item">
+                    <div class="list__button">
+                        <img src="img/icons/fuente de poder.png" alt="" class="list__img">
+                        <button id="fuentes" class="nav__link" >Fuentes</button>
+                    </div>
+                </li>
+
+                <li class="list__item">
+                    <div class="list__button">
+                        <img src="img/icons/carrito.png" alt="" class="list__img">
+                        <a class="list__carrito" href="carrito.html" >Carrito <span id="numeroCarrito">(0)</span></a>
+                    </div>
+                </li>
+
+              </ul>
+            </nav>
+
+            <footer class="footer">
+
+                <p class="footer__texto"> © 2023 Ramiro Tevez</p>
+            </footer>
+
+        </aside>
+
+        <main class="productos">
+
+
+            <h2 class="productos__titulo-principal" id="titulo-principal">Todos los productos</h2>
+            <div id="contenedor-productos" class="productos__contenedor"> 
+                <!--JS AQUI PRODUCTOS-->
+            </div>
+
+        </main>
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

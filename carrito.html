@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <title>Carrito</title>
+</head>
+<body>
+    <div class="wrapper">
+
+        <aside>
+
+            <header class="header">
+                <h1 class="header__titulo">Ramiro <span>Teach</span></h1>
+            </header>
+
+            <nav class="nav">
+
+                <li class="list__item">
+                    <div class="list__button">
+                        <img src="img/icons/left.png" alt="">
+                        <a class="list__carrito" href="index.html" >Seguir Comprando</a>
+                    </div>
+                </li>
+
+                <li class="list__item">
+                    <div class="list__button">
+                        <img src="img/icons/carrito.png" alt="" class="list__img">
+                        <a class="list__carrito active"> Carrito</a>
+                    </div>
+                </li>
+
+              </ul>
+            </nav>
+
+            <footer class="footer">
+
+                <p class="footer__texto"> © 2023 Ramiro Tevez</p>
+            </footer>
+
+        </aside>
+
+        <main class="carrito">
+
+
+            <h2 class="carrito__titulo">Carrito</h2>
+
+            <div class="carrito__contenedor">
+                <p id="carrito-vacio" class="carrito__vacio">Tu carrio esta vacio. <i class="fa-regular fa-face-sad-tear"></i></p>
+
+                <div id="contenedor-carrito" class="carrito__productos disabled">
+                  <!--Aqui van los productos del carrito con js-->
+                </div>
+
+                <div id="carrito-acciones" class="carrito__acciones disabled">
+                    <div class="carrito__acciones-izquierda">
+                        <button class="carrio__acciones-vaciar">Vaciar Carrito</button>
+                    </div>
+                    <div class="carrito__acciones-derecha">
+                        <div class="carrito__acciones-total">
+                            <p>Total:</p>
+                            <p id="total"> $2400</p>
+                        </div>
+                        <button class="carrito__acciones-comprar">Comprar ahora</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </main>
+
+
+    </div>
+
+    <script src="carrito.js"></script>
+</body>
+</html>
