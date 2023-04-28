@@ -8,6 +8,7 @@ const carritoVacio = document.getElementById("carrito-vacio");
 const carritoAcciones = document.getElementById("carrito-acciones");
 let botonesEliminar = document.querySelectorAll(".carrito__producto-eliminar");
 const botonTotal = document.getElementById("total");
+const botonVaciarCarrito = document.querySelector(".carrio__acciones-vaciar");
 
 
 function cargarProductosCarrito (){
@@ -67,12 +68,8 @@ cargarProductosCarrito();
 function totalApagar() {
 
     let totalNuevo  = carritoProductos.reduce((acc, prod ) => acc + prod.precio, 0);
-    botonTotal.innerHTML = totalNuevo
-
+    botonTotal.innerHTML = `$${totalNuevo}`;
 }
-
-
-
 
 
 
@@ -99,3 +96,12 @@ function eliminarDelCarrito(e){
 
 }
 
+
+botonVaciarCarrito.addEventListener("click",vaciarCarrito);
+
+function vaciarCarrito (){
+
+    carritoProductos.length = 0;
+    localStorage.setItem("productoCarrito", JSON.stringify(carritoProductos));
+    cargarProductosCarrito()
+}
