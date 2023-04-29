@@ -4,7 +4,7 @@ carritoProductos = JSON.parse(carritoProductos);
 
 
 const carritoContenedor_productos = document.getElementById("contenedor-carrito");
-const carritoVacio = document.getElementById("carrito-vacio");
+const carritoVacio = document.getElementById("vacio");
 const carritoAcciones = document.getElementById("carrito-acciones");
 let botonesEliminar = document.querySelectorAll(".carrito__producto-eliminar");
 const botonTotal = document.getElementById("total");
@@ -19,7 +19,7 @@ let audioCheck = document.getElementById("check");
 function cargarProductosCarrito (){
     if(carritoProductos && carritoProductos.length > 0){
 
-        carritoVacio.classList.add("disabled");
+        carritoVacio.classList.add("disabled")
         carritoContenedor_productos.classList.remove("disabled");
         carritoAcciones.classList.remove("disabled");
     
