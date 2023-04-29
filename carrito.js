@@ -9,8 +9,11 @@ const carritoAcciones = document.getElementById("carrito-acciones");
 let botonesEliminar = document.querySelectorAll(".carrito__producto-eliminar");
 const botonTotal = document.getElementById("total");
 const botonVaciarCarrito = document.querySelector(".carrio__acciones-vaciar");
+const botonComprar = document.querySelector(".carrito__acciones-comprar");
 let audioEliminar = document.getElementById("eliminar");
 let audioVaciar = document.getElementById("vaciar");
+let audioCheck = document.getElementById("check");
+
 
 
 function cargarProductosCarrito (){
@@ -122,8 +125,6 @@ botonVaciarCarrito.addEventListener("click",vaciarCarrito);
 
 function vaciarCarrito (){
 
-    
-
     Swal.fire({
 
         title: '¿Estas seguro?',
@@ -152,3 +153,36 @@ function vaciarCarrito (){
       })
 
 }
+
+
+botonComprar.addEventListener("click", comprarCarrito);
+
+async function comprarCarrito(){
+
+    const { value: email } = await Swal.fire({
+        title: 'Ingresa un Correo',
+        input: 'email',
+        inputLabel: 'Te contactaremos para realizar el pago',
+        inputPlaceholder: 'Email',
+        customClass: "fontsize",
+        confirmButtonText: 'Enviar'
+
+      })
+      
+      if (email) {
+        Swal.fire({
+           icon: "success",
+           title: "Pronto te contactamos!",
+           customClass: "fontsize"
+        })
+        audioCheck.play();
+        carritoProductos.length = 0;
+        localStorage.setItem("productoCarrito", JSON.stringify(carritoProductos));
+        carritoVacio.classList.remove("disabled");
+        carritoContenedor_productos.classList.add("disabled");
+        carritoAcciones.classList.add("disabled");   
+      
+    }
+    
+}
+
