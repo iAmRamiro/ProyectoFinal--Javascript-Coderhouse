@@ -9,6 +9,8 @@ const carritoAcciones = document.getElementById("carrito-acciones");
 let botonesEliminar = document.querySelectorAll(".carrito__producto-eliminar");
 const botonTotal = document.getElementById("total");
 const botonVaciarCarrito = document.querySelector(".carrio__acciones-vaciar");
+let audioEliminar = document.getElementById("eliminar");
+let audioVaciar = document.getElementById("vaciar");
 
 
 function cargarProductosCarrito (){
@@ -85,6 +87,25 @@ function actulizarProductoBotonEliminar (){
 
 function eliminarDelCarrito(e){
 
+    audioEliminar.play();
+
+    Toastify({
+        text: "Producto Eliminado",
+        duration: 3000,
+        close: true,
+        gravity: "top", 
+        position: "right", 
+        stopOnFocus: true, 
+        style: {
+          background: "linear-gradient(to right, #E80C0C, #ED7B7B)", 
+          borderRadius: "2rem",
+          textTransform: "uppercase",
+        },
+        onClick: function(){} 
+      }).showToast();
+
+  
+
     let idBoton = e.currentTarget.id;
     
     let index = carritoProductos.findIndex( product => product.id === idBoton);
@@ -101,7 +122,33 @@ botonVaciarCarrito.addEventListener("click",vaciarCarrito);
 
 function vaciarCarrito (){
 
-    carritoProductos.length = 0;
-    localStorage.setItem("productoCarrito", JSON.stringify(carritoProductos));
-    cargarProductosCarrito()
+    
+
+    Swal.fire({
+
+        title: '¿Estas seguro?',
+        text: "No podras revertir los cambios!",
+        icon: 'warning',
+        customClass: "fontsize",
+        showCancelButton: "true",
+        cancelButtonText: "Cancelar",
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Vaciar'
+
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire({
+            customClass: "fontsize",
+            icon: "success",
+            text: "Carrito Vacio"
+          }
+          )
+          audioVaciar.play();
+          carritoProductos.length = 0;
+          localStorage.setItem("productoCarrito", JSON.stringify(carritoProductos));
+          cargarProductosCarrito()
+        }
+      })
+
 }

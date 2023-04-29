@@ -15,6 +15,9 @@ const nav__links = document.querySelectorAll(".nav__link");
 const tituloPrincipal = document.getElementById("titulo-principal");
 let productoAgregar = document.querySelectorAll(".producto__agregar");
 const numeroCarrito = document.getElementById("numeroCarrito");
+let audioAñadir = document.getElementById("añadir");
+let audioEliminar = document.getElementById("eliminar");
+
 
 
 
@@ -103,6 +106,23 @@ if(carritoProductosLS){
 }
 
 function AgregarAlCarrito(e){
+
+    Toastify({
+        text: "Se agrego al Carrito",
+        duration: 3000,
+        close: true,
+        gravity: "top", 
+        position: "right", 
+        stopOnFocus: true, 
+        style: {
+          background: "linear-gradient(to right, #215BE1, #477DE7)",
+          borderRadius: "2rem",
+          textTransform: "uppercase",
+        },
+        onClick: function(){} 
+      }).showToast();
+
+      audioAñadir.play();
 
     const botonId = e.currentTarget.id;
     const productoAgregado = productos.find(producto => producto.id === botonId);
