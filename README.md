@@ -4,10 +4,12 @@
 <img src="img/sitio.PNG">
 
 # Un e-commerce bastante simple
+* Con un carrito de compras y algunos sweet alerts
 
 <img src="img/carrito.PNG">
 
-# Tambien es reponsive 
+# Tambien es responsive 
+* Se adapta a tablet y celulares
 
 <img src="img/responsive1.PNG">
 
