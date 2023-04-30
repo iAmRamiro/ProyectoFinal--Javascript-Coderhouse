@@ -13,7 +13,7 @@
 
 # Con boton hamburguesa 
 
-<img src="img/respondive2.PNG">
+<img src="img/responsive2.PNG">
 
 
 
