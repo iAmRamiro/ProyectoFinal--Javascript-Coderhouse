@@ -338,7 +338,7 @@ aside{
     margin-top: 4rem;
 }
 
-.carrio__acciones-vaciar{
+.carrito__acciones-vaciar{
     border: 0;
     padding: 1.4rem;
     border-radius: 1rem;
@@ -389,4 +389,125 @@ aside{
 .fontsize{
 
     font-size: 1.8rem !important;
+}
+
+.header-mobile{
+    display: none;
+}
+
+.open-menu{
+    display: none;
+}
+
+.close-menu{
+    display: none;
+}
+
+/* --- Media Queries ---*/
+
+@media (max-width: 768px) {
+
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        padding: 1rem;
+    }
+
+    .productos__contenedor{
+
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    aside{
+        position: fixed;
+        z-index: 9;
+        background-color: var(--negro2);
+        left: 0;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .75);
+        transform: translateX(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: .2s;
+
+    }
+
+    .aside-visible{
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .productos, .carrito{
+       margin-top: 1rem;
+       margin-left: 2rem;
+       margin-right: 2rem;
+    }
+
+    .header-mobile{
+        display: flex;
+        padding: 1rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header__titulo--mobile{
+        color: var(--blanco);
+        font-family: 'Permanent Marker', cursive;
+        font-weight: 400;
+    }
+
+    .header__titulo--mobile span{
+        color: var(--rojo);
+    }
+
+    .header .header__titulo{
+        margin-right: 4rem;
+    }
+
+    .open-menu, .close-menu{
+        display: block;
+        background-color: transparent;
+        border: none;
+        font-size: 4rem;
+        cursor: pointer;
+        color: var(--gris);
+    }
+
+    .close-menu{
+        display: block;
+        position: absolute;
+        top: 4rem;
+        right: 1rem;
+    }
+}
+
+
+@media (max-width: 400px){
+    .productos__contenedor{
+
+        grid-template-columns: 1fr;
+    }
+
+    .header__titulo--mobile{
+        font-size: 4rem;
+    }
+
+    .carrito__producto{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .carrito__producto-img{
+        width: 100%;
+    }
+
+    .carrito__producto-eliminar{
+        font-size: 3rem;
+    }
+
+    .carrito__acciones{
+        flex-wrap: wrap;
+        row-gap: 1.2rem;
+    }
 }

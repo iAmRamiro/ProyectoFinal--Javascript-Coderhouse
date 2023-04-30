@@ -19,7 +19,18 @@
 
     <div class="wrapper">
 
+        <header class="header-mobile">
+            <h1 class="header__titulo header__titulo--mobile">Ramiro <span>Tech</span></h1>
+            <button class="open-menu" id="open-menu" >
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </header>
+
         <aside>
+
+            <button class="close-menu" id="close-menu" >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
 
             <header class="header">
                 <h1 class="header__titulo">Ramiro <span>Teach</span></h1>
@@ -73,7 +84,7 @@
 
                 <div id="carrito-acciones" class="carrito__acciones disabled">
                     <div class="carrito__acciones-izquierda">
-                        <button class="carrio__acciones-vaciar">Vaciar Carrito</button>
+                        <button class="carrito__acciones-vaciar">Vaciar Carrito</button>
                     </div>
                     <div class="carrito__acciones-derecha">
                         <div class="carrito__acciones-total">
@@ -92,7 +103,7 @@
 
     </div>
 
-        
+    <script src="menu.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="carrito.js"></script>

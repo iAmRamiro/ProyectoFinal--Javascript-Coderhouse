@@ -16,7 +16,7 @@ const tituloPrincipal = document.getElementById("titulo-principal");
 let productoAgregar = document.querySelectorAll(".producto__agregar");
 const numeroCarrito = document.getElementById("numeroCarrito");
 let audioAñadir = document.getElementById("añadir");
-let audioEliminar = document.getElementById("eliminar");
+
 
 
 
@@ -74,10 +74,7 @@ nav__links.forEach((boton) => {
             // Se muestran todos los productos
             cargarProductos(productos)
             tituloPrincipal.innerText = "Todos los Productos"
-        }
-
-       
-       
+        }       
 
     })
 
