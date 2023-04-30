@@ -480,6 +480,8 @@ aside{
         top: 4rem;
         right: 1rem;
     }
+
+    
 }
 
 
@@ -509,5 +511,9 @@ aside{
     .carrito__acciones{
         flex-wrap: wrap;
         row-gap: 1.2rem;
+    }
+
+    .carrito__vacio-texto{
+        font-size: 1.4rem;
     }
 }
