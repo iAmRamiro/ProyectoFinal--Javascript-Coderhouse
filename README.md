@@ -1,4 +1,7 @@
-# PE-3--JavasCript-CoderHouse
-PreEntrega -3 Del Curso de JS de CoderHouse
+# Proyecto Final del curos de Javascript de Coderhouse!
+
+* E-commerce Basico empleado lo visto en el curso de Js, con localstorage, fetch, librerias etc
+<img src="img/sitio.PNG">
+
 
 
